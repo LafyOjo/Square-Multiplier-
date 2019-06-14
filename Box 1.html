@@ -1,0 +1,51 @@
+<DOCTYPE HTML>
+<html>
+ <head>
+ <title>Question 1</title>
+ <style>
+ div{
+	 width: 100px;
+	 height: 100px;
+	 float: left;
+	 }
+	  body {
+	  width: 100%;
+	  }
+	 </style>
+ </head>
+
+ <body>
+	 <!--This will allow the user to select the number of boxes that would appear.-->
+	 <form id="make">
+	 <br> <input name ="size" type="text" />
+	 <input type="button" value="Start" onClick="resize()" />
+	 </form><br/>
+
+	 <div id="square">
+	 </div>
+
+
+
+	 <script>
+	 var number = 5;
+	 
+	 function resize() {
+	 var box = document.getElementById("make").elements["size"].value;
+	 
+	           for(i=0; i < box; i++) {
+	               var squaredx = document.createElement("div");
+	               document.body.appendChild(squaredx);
+	               squaredx.style.marginLeft = number + "px";
+	 
+			       var r = Math.floor(Math.random() * 255);
+	               var g = Math.floor(Math.random() * 255);
+                   var b = Math.floor(Math.random() * 255);
+	 
+	               squaredx.style.backgroundColor = "rgb(" + r + ',' + g + ',' + b + ")";
+	               number += number;
+	            }
+	 }
+	 </script>
+</body>
+</html>
+
